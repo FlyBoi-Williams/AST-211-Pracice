@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AST Practice Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="start-screen">
+
+        <h1>🌱 AST Practice Quiz</h1>
+
+        <p class="subtitle">
+            Test your knowledge with multiple-choice questions.
+        </p>
+
+        <div class="info-box">
+
+            <p>📚 Questions: <span id="totalQuestions"></span></p>
+
+            <p>✅ Each question carries 1 mark.</p>
+
+            <p>🎯 Your score will appear immediately after submission.</p>
+
+            <p>✔ Correct answers will be highlighted in green.</p>
+
+            <p>❌ Wrong answers will be highlighted in red.</p>
+
+        </div>
+
+        <button id="startBtn">
+            Start Quiz
+        </button>
+
+    </div>
+
+
+    <div id="quiz-screen" class="hidden">
+
+        <div class="top-bar">
+
+            <div class="progress">
+                Question
+                <span id="currentQuestion">1</span>
+                /
+                <span id="questionCount">1</span>
+            </div>
+
+            <div class="score">
+                Score:
+                <span id="liveScore">0</span>
+            </div>
+
+        </div>
+
+        <div class="question-card">
+
+            <h2 id="questionText">
+                Question goes here...
+            </h2>
+
+            <div id="answers" class="answers">
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="prevBtn">
+                Previous
+            </button>
+
+            <button id="nextBtn">
+                Next
+            </button>
+
+            <button id="submitBtn" class="hidden">
+                Submit Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="result-screen" class="hidden">
+
+        <h1>🎉 Quiz Completed!</h1>
+
+        <div class="result-box">
+
+            <h2 id="finalScore"></h2>
+
+            <h3 id="percentage"></h3>
+
+            <p id="remark"></p>
+
+        </div>
+
+        <h2 class="review-title">
+            Review Your Answers
+        </h2>
+
+        <div id="review"></div>
+
+        <button id="restartBtn">
+            Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
